@@ -16,6 +16,7 @@
             font-size: 1rem;
             font-weight: 400;
             margin-right: 1rem;
+            transition: color .25s cubic-bezier(.4, 0, .2, 1), background-color .25s cubic-bezier(.4, 0, .2, 1);
 
             &:hover {
                 background-color: var(--neutral-800);
