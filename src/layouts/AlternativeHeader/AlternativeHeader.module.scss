@@ -1,0 +1,15 @@
+.container {
+  padding: 20px;
+  height: 75px;
+  background-color: var(--transparent);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    margin-left: 1rem;
+    margin-top: 8px;
+  }
+}
+

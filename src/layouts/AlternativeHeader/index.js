@@ -1,0 +1,1 @@
+export { AlternativeHeader } from './AlternativeHeader';
