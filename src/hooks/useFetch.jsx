@@ -51,8 +51,8 @@ export const useFetch = () => {
     setLoading(true);
 
     getUserInformation(id)
-      .then((userInfos) => {
-        const formatApi = formatApiResponse(userInfos);
+      .then((userInformation) => {
+        const formatApi = formatApiResponse(userInformation);
         const formattedData = globalFormat(formatApi);
         setData(formattedData);
         console.log('Using APi Data');
