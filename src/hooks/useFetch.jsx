@@ -5,6 +5,9 @@ import { globalFormat } from '../dataFormat';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const USER_URL = 'http://localhost:3000/user/';
+const ACTIVITY_URL = '/activity';
+const AVERAGE_SESSIONS_URL = '/average-sessions';
+const PERFORMANCE_URL = '/performance';
 
 /**
  * Retrieve user information
@@ -13,9 +16,9 @@ const USER_URL = 'http://localhost:3000/user/';
  */
 const getUserInformation = async (id) => {
   const user = await axios.get(`${USER_URL}${id}`);
-  const activity = await axios.get(`${USER_URL}${id}/activity`);
-  const averageSessions = await axios.get(`${USER_URL}${id}/average-sessions`);
-  const performance = await axios.get(`${USER_URL}${id}/performance`);
+  const activity = await axios.get(`${USER_URL}${id}${ACTIVITY_URL}`);
+  const averageSessions = await axios.get(`${USER_URL}${id}${AVERAGE_SESSIONS_URL}`);
+  const performance = await axios.get(`${USER_URL}${id}${PERFORMANCE_URL}`);
 
   return { user, activity, averageSessions, performance };
 };
@@ -60,14 +63,14 @@ export const useFetch = () => {
       .catch((e) => {
         if (e.code === 'ERR_NETWORK') {
           const mockData = getMockData(parseInt(id, 10));
-          setDataSource('Mock Data');
-          console.log('Using Mock Data');
-
-          if (!mockData) {
-            navigate('/Error');
-          } else {
+          
+          if (mockData) {
+            setDataSource('Mock Data');
+            console.log('Using Mock Data');
             const formattedMockData = globalFormat(mockData);
             setData(formattedMockData);
+          } else {
+            navigate('/Error');
           }
         } else {
           navigate('/Error');
