@@ -44,11 +44,16 @@ const formatApiResponse = (data) => {
  */
 export const useFetch = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [apiActivation, setApiActivation] = useState();
+  const [error, setError] = useState(false);
   const [dataSource, setDataSource] = useState('API');
+
+  const handleDataSourceChange = (isChecked) => {
+    setDataSource(isChecked ? 'Mock Data' : 'API');
+  };
 
   useEffect(() => {
     setLoading(true);
@@ -58,27 +63,28 @@ export const useFetch = () => {
         const formatApi = formatApiResponse(userInformation);
         const formattedData = globalFormat(formatApi);
         setData(formattedData);
+        setApiActivation(true);
         console.log('Using APi Data');
       })
       .catch((e) => {
         if (e.code === 'ERR_NETWORK') {
           const mockData = getMockData(parseInt(id, 10));
-          
+          setApiActivation(false);
           if (mockData) {
             setDataSource('Mock Data');
             console.log('Using Mock Data');
             const formattedMockData = globalFormat(mockData);
             setData(formattedMockData);
           } else {
-            navigate('/Error');
+            setError(e);
           }
         } else {
-          navigate('/Error');
+          setError(e);
         }
       });
 
     setLoading(false);
   }, []);
 
-  return { data, loading, dataSource };
+  return { data, loading, error, apiActivation, dataSource, handleDataSourceChange };
 }

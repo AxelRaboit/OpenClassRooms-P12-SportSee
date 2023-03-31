@@ -2,7 +2,7 @@ import style from './Main.module.scss';
 import { useFetch } from '../../hooks';
 
 export const Main = () => {
-  const { data, loading } = useFetch('api');
+  const { data, loading, error } = useFetch();
 
   if (loading) {
     return <div>Loading...</div>;
@@ -12,7 +12,7 @@ export const Main = () => {
     return <div>No data...</div>;
   }
 
-  console.log(data);
+  console.log(data, 'data :)');
 
   return (
     <></>

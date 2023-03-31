@@ -1,0 +1,48 @@
+.container {
+  background-color: var(--red);
+  padding: 6px 14px;
+  display: flex;
+  justify-content: space-between;
+
+  .logoutLink {
+    display: flex;
+    align-items: center;
+  }
+
+  .logoutIcon {
+    cursor: pointer;
+    color: var(--white)
+  }
+
+  .containerCheckbox {
+
+    display: flex;
+    align-items: center;
+
+    span {
+      margin: 0;
+    }
+
+    input {
+      cursor: pointer;
+      margin-right: 10px;
+      width: 20px;
+      height: 100%;
+    }
+  }
+
+  .dataLabel {
+    font-weight: 400;
+    color: var(--white);
+  }
+  
+  .dataSource {
+    font-weight: 600;
+    color: var(--white);
+  }  
+
+  .dataLabel, .dataSource {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+}
