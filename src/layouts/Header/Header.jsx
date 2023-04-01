@@ -6,11 +6,11 @@ import { useFetch } from '../../hooks';
 
 export const Header = () => {
 
-  const { dataSource, handleDataSourceChange, apiActivation } = useFetch();
+  const { dataSource, handleDataSourceChange } = useFetch();
 
   return (
     <header>
-      <DebugBar apiActivation={apiActivation} dataSource={dataSource} handleDataSourceChange={handleDataSourceChange} />
+      <DebugBar dataSource={dataSource} handleDataSourceChange={handleDataSourceChange} />
       <div className={style.container}>
         <div className={style.logoContainer}>
           <Logo width={135} className={style.logo} />
