@@ -88,6 +88,9 @@ export const useFetch = () => {
             setError(e);
           }
         });
+    } else {
+      const error = new Error('No data source selected');
+      setError(error);
     }
 
     setLoading(false);
