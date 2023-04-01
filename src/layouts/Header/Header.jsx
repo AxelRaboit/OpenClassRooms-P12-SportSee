@@ -7,11 +7,6 @@ import { useFetch } from '../../hooks';
 export const Header = () => {
 
   const { dataSource, handleDataSourceChange, apiActivation } = useFetch();
-  const [isChecked, setIsChecked] = useState(dataSource === 'Mock Data');
-
-  useEffect(() => {
-    setIsChecked(dataSource === 'Mock Data');
-  }, [dataSource]);
 
   return (
     <header>

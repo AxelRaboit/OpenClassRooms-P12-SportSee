@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import style from './DebugBar.module.scss';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
@@ -18,8 +19,10 @@ export const DebugBar = ({ dataSource, handleDataSourceChange, disableDataSwitch
         <span className={style.dataLabel}>Using data from :</span>
         <span className={style.dataSource}> {dataSource} </span>
       <div className={style.containerCheckbox}>
-        <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} disabled={disableDataSwitcher} />
-        <span className={style.dataLabel}>Use Mock Data</span>
+        <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} />
+        <span className={style.dataLabel}>
+          Use Mock Data
+        </span>
       </div>
       </div>
       <NavLink to="/" className={style.logoutLink}>
