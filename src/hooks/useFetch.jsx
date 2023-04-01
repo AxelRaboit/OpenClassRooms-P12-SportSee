@@ -47,7 +47,6 @@ export const useFetch = () => {
 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [disableDataSwitcher, setDisableDataSwitcher] = useState();
   const [error, setError] = useState(false);
   const [dataSource, setDataSource] = useState('API');
 
@@ -77,7 +76,6 @@ export const useFetch = () => {
         .catch((e) => {
           if (e.code === 'ERR_NETWORK') {
             const mockData = getMockData(parseInt(id, 10));
-            setDisableDataSwitcher(true);
             if (mockData) {
               setDataSource('Mock Data');
               console.log('Using Mock Data');
@@ -96,5 +94,5 @@ export const useFetch = () => {
     
   }, [dataSource]);
 
-  return { data, loading, error, disableDataSwitcher, dataSource, handleDataSourceChange };
+  return { data, loading, error, dataSource, handleDataSourceChange };
 }

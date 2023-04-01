@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react';
 import style from './DebugBar.module.scss';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { ReactComponent as LogoutIcon } from '../../assets/icon-logout.svg';
 
-export const DebugBar = ({ dataSource, handleDataSourceChange, disableDataSwitcher }) => {
+export const DebugBar = ({ dataSource, handleDataSourceChange }) => {
 
   const isChecked = dataSource === 'Mock Data';
 
