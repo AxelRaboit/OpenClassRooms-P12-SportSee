@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { ReactComponent as LogoutIcon } from '../../assets/icon-logout.svg';
 
-export const DebugBar = ({ dataSource, handleDataSourceChange, apiActivation }) => {
+export const DebugBar = ({ dataSource, handleDataSourceChange, disableDataSwitcher }) => {
 
   const isChecked = dataSource === 'Mock Data';
 
@@ -18,7 +18,7 @@ export const DebugBar = ({ dataSource, handleDataSourceChange, apiActivation }) 
         <span className={style.dataLabel}>Using data from :</span>
         <span className={style.dataSource}> {dataSource} </span>
       <div className={style.containerCheckbox}>
-        <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} disabled={!apiActivation} />
+        <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange} disabled={disableDataSwitcher} />
         <span className={style.dataLabel}>Use Mock Data</span>
       </div>
       </div>

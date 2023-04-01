@@ -47,7 +47,7 @@ export const useFetch = () => {
 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [apiActivation, setApiActivation] = useState();
+  const [disableDataSwitcher, setDisableDataSwitcher] = useState();
   const [error, setError] = useState(false);
   const [dataSource, setDataSource] = useState('API');
 
@@ -56,35 +56,45 @@ export const useFetch = () => {
   };
 
   useEffect(() => {
+
+    console.log(dataSource);
+
     setLoading(true);
 
-    getUserInformation(id)
-      .then((userInformation) => {
-        const formatApi = formatApiResponse(userInformation);
-        const formattedData = globalFormat(formatApi);
-        setData(formattedData);
-        setApiActivation(true);
-        console.log('Using APi Data');
-      })
-      .catch((e) => {
-        if (e.code === 'ERR_NETWORK') {
-          const mockData = getMockData(parseInt(id, 10));
-          setApiActivation(false);
-          if (mockData) {
-            setDataSource('Mock Data');
-            console.log('Using Mock Data');
-            const formattedMockData = globalFormat(mockData);
-            setData(formattedMockData);
+    if (dataSource === 'Mock Data') {
+      const mockData = getMockData(parseInt(id, 10));
+      console.log('Using Mock Data');
+      const formattedMockData = globalFormat(mockData);
+      setData(formattedMockData);
+    } else if (dataSource === 'API') {
+      getUserInformation(id)
+        .then((userInformation) => {
+          const formatApi = formatApiResponse(userInformation);
+          const formattedData = globalFormat(formatApi);
+          setData(formattedData);
+          console.log('Using APi Data');
+        })
+        .catch((e) => {
+          if (e.code === 'ERR_NETWORK') {
+            const mockData = getMockData(parseInt(id, 10));
+            setDisableDataSwitcher(true);
+            if (mockData) {
+              setDataSource('Mock Data');
+              console.log('Using Mock Data');
+              const formattedMockData = globalFormat(mockData);
+              setData(formattedMockData);
+            } else {
+              setError(e);
+            }
           } else {
             setError(e);
           }
-        } else {
-          setError(e);
-        }
-      });
+        });
+    }
 
     setLoading(false);
-  }, []);
+    
+  }, [dataSource]);
 
-  return { data, loading, error, apiActivation, dataSource, handleDataSourceChange };
+  return { data, loading, error, disableDataSwitcher, dataSource, handleDataSourceChange };
 }
