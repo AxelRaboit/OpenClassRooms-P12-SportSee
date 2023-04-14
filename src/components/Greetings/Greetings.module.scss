@@ -1,0 +1,22 @@
+.container {
+  height: 14rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.greetings,
+.name {
+  font-size: 2.25rem;
+}
+
+.name {
+  margin-left: 5px;
+  color: var(--red);
+}
+
+@media (max-width: 1200px) {
+  .container {
+    height: 10rem;
+  }
+}

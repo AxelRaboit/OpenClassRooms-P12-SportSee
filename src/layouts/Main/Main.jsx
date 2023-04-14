@@ -1,5 +1,6 @@
 import style from './Main.module.scss';
 import { useFetch } from '../../hooks';
+import { Greetings } from '../../components';
 
 export const Main = () => {
   const { data, loading, error } = useFetch();
@@ -15,6 +16,8 @@ export const Main = () => {
   console.log(data, 'data :)');
 
   return (
-    <></>
+    <div className={style.container}>
+      <Greetings name={data.nameDisplay} />
+    </div>
   );
 }
