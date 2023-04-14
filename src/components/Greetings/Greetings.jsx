@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import style from './Greetings.module.scss';
 
 /**
- * A component that displays a greeting message and user's name
+ * Displays a greeting message and user's name
  * @param {Object} props - The props object containing user's name
  * @param {string} props.name - The user's name to be displayed
  * @returns {JSX.Element} - A React component that displays a greeting message and user's name
@@ -17,7 +17,7 @@ export const Greetings = (props) => {
         <span className={style.greetings}>Bonjour</span>
         <span className={style.name}>{name}</span>
       </div>
-      <span>Félicitation ! Vous avez explosé vos objectifs hier 👏</span>
+      <span className={style.message}>Félicitation ! Vous avez explosé vos objectifs hier 👏</span>
     </div>
   );
 }

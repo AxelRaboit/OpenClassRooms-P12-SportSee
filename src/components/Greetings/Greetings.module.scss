@@ -1,22 +1,23 @@
 .container {
-  height: 14rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+  align-items: flex-start;
+  
+  .greetings,
+  .name {
+    font-size: 2.25rem;
+    font-weight: 600;
+  }
 
-.greetings,
-.name {
-  font-size: 2.25rem;
-}
+  .name {
+    margin-left: 5px;
+    color: var(--red);
+  }
 
-.name {
-  margin-left: 5px;
-  color: var(--red);
-}
-
-@media (max-width: 1200px) {
-  .container {
-    height: 10rem;
+  .message {
+    margin-top: 1rem;
   }
 }
+
