@@ -1,0 +1,1 @@
+export { NutriCard } from './NutriCard';

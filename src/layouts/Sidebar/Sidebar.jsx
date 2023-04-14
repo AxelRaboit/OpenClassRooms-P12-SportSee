@@ -2,7 +2,6 @@ import { ReactComponent as Meditation } from '../../assets/sidemenuIcons/meditat
 import { ReactComponent as Swimming } from '../../assets/sidemenuIcons/swimming-icon.svg';
 import { ReactComponent as Bike } from '../../assets/sidemenuIcons/bike-icon.svg';
 import { ReactComponent as WeightTrain } from '../../assets/sidemenuIcons/weight-icon.svg';
-import { NavLink } from 'react-router-dom'
 
 import style from './Sidebar.module.scss';
 
