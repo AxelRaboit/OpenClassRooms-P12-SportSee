@@ -1,32 +1,38 @@
 .cardWrap {
-  height: 100px;
+  height: 100%;
+  width: 100%;
   margin-bottom: 2.5rem;
+  padding: 1rem;
   background-color: var(--light-grey);
   border-radius: var(--border-radius-sm);
   display: flex;
   align-items: center;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
   
   .iconWrap {
     display: flex;
     justify-content: center;
-    margin-left: 10%;
+    margin-left: 1rem;
   }
 
   .nutritionInfo {
     display: flex;
     flex-direction: column;
-    margin-left: 10%;
-    font-size: 12px;
+    margin-left: 1rem;
+    font-size: var(--fs-xsmall);
     justify-content: center;
     align-items: flex-start;
     
     .nutriValue {
-      font-size: 16px;
+      font-size: var(--fs-medium);
       font-weight: 700;
     }
     
     .nutrition {
-      font-size: 12px;
+      font-size: var(--fs-xsmall);
       color: var(--dark-grey);
     }
   }

@@ -1,6 +1,6 @@
 import style from './Main.module.scss';
 import { useFetch } from '../../hooks';
-import { Greetings, NutriCard } from '../../components';
+import { Greetings, NutriCard, Activity } from '../../components';
 
 // icons
 import { ReactComponent as FireIcon } from '../../assets/nutritionCardIcons/fire-icon.svg';
@@ -25,7 +25,12 @@ export const Main = () => {
     <div className={style.container}>
       <Greetings name={data.nameDisplay} />
       <div className={style.mainWrap}>
-      <div className={style.cardWrap}>
+        <div className={style.chartContainer}>
+          <div className={style.activityChartWrap}>
+            <Activity data={data.activitySection} />
+          </div>
+        </div>
+        <div className={style.cardWrap}>
           <NutriCard value={data.calories} nutrition="Calories">
             <FireIcon width={45} />
           </NutriCard>

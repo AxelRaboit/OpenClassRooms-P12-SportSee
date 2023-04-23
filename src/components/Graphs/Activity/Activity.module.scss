@@ -1,0 +1,46 @@
+.customTooltip {
+  background-color: var(--red);
+  border: none;
+  font-size: var(--fs-xxsmall);
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.container {
+  background-color: var(--light-grey);
+  padding: 1rem;
+  border-radius: var(--border-radius-sm);
+  height: 100%;
+  
+  .legendWrap,
+  .legendContainerElements,
+  .legendOne,
+  .legendSecond {
+    display: flex;
+  }
+  
+  img {
+    margin-right: 10px;
+  }
+  
+  .legendWrap {
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    margin-left: 6px;
+    margin-right: 1rem;
+  }
+
+  .legendContainerElements {
+    .legendOne,
+    .legendSecond {
+      align-items: center;
+      margin-left: 1rem;
+    }
+  }
+}
+
+
+
+
