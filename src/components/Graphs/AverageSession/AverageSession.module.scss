@@ -1,0 +1,30 @@
+.container {
+  margin: 10px;
+  width: 100%;
+  height: 85%;
+  background-color: var(--red);
+  border-radius: 5px;
+  position: relative;
+
+  .containerTitle {
+    .title {
+      font-weight: var(--font-bold);
+      color: var(--transparent-grey);
+      font-size: 14px;
+      position: absolute;
+      text-align: start;
+      top: 1rem;
+      left: 2rem;
+    }
+  }
+}
+
+.customTooltip {
+  background-color: var(--white);
+  border: none;
+  font-size: 10px;
+  color: var(--black);
+  padding: 0 10px;
+  text-align: center;
+  line-height: 4;
+}

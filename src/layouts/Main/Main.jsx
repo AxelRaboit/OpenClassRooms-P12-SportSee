@@ -1,8 +1,7 @@
 import style from './Main.module.scss';
 import { useFetch } from '../../hooks';
-import { Greetings, NutriCard, Activity } from '../../components';
+import { Greetings, NutriCard, Activity, Performance, AverageSession, Score } from '../../components';
 
-// icons
 import { ReactComponent as FireIcon } from '../../assets/nutritionCardIcons/fire-icon.svg';
 import { ReactComponent as AppleIcon } from '../../assets/nutritionCardIcons/apple-icon.svg';
 import { ReactComponent as ChickenIcon } from '../../assets/nutritionCardIcons/chicken-icon.svg';
@@ -28,6 +27,12 @@ export const Main = () => {
         <div className={style.chartContainer}>
           <div className={style.activityChartWrap}>
             <Activity data={data.activitySection} />
+          </div>
+
+          <div className={style.bottomCharts}>
+            <AverageSession data={data.averageSection} />
+            <Performance data={data.performanceSection} />
+            <Score data={data.scoreSection} />
           </div>
         </div>
         <div className={style.cardWrap}>

@@ -2,40 +2,40 @@
     margin: 0 auto;
     /* max-width: var(--max-width); */
     width: 80%;
+    
+    .mainWrap {
+        width: 100%;
+        display: flex;
+        margin-bottom: 2rem;
+        gap: 2rem;
+        
+        .chartContainer {
+            width: 75%;
+            
+            .activityChartWrap {
+                height: 20rem;
+            }
+            
+            .bottomCharts {
+                height: 330px;
+                display: flex;
+                width: 100%;
+                align-items: flex-end;
+                justify-content: space-between;
+            }
+        }
+        
+        .cardWrap {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
 }
 
-.mainWrap {
-    width: 100%;
-    display: flex;
-    margin-bottom: 2rem;
-    /* height: 60vh; */
-    gap: 2rem;
-}
 
-.chartContainer {
-    width: 75%;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
-}
 
-.cardWrap {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
 
-.activityChartWrap {
-    height: 20rem;
-}
 
-/* .bottomCharts {
-    border: solid red 1px;
-    height: 330px;
-    display: flex;
-    width: 100%;
-    align-items: flex-end;
-    justify-content: space-between;
-} */

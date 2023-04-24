@@ -30,3 +30,8 @@ export const DebugBar = ({ dataSource, handleDataSourceChange }) => {
     </div>
   );
 }
+
+DebugBar.propTypes = {
+  dataSource: PropTypes.string.isRequired,
+  handleDataSourceChange: PropTypes.func.isRequired,
+};

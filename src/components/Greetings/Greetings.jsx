@@ -21,6 +21,7 @@ export const Greetings = (props) => {
     </div>
   );
 }
+
 Greetings.propTypes = {
   name: PropTypes.string.isRequired,
 };
