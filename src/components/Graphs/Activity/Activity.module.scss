@@ -30,6 +30,10 @@
     margin-bottom: 2rem;
     margin-left: 6px;
     margin-right: 1rem;
+
+    .title {
+      font-weight: var(--font-bold);
+    }
   }
 
   .legendContainerElements {

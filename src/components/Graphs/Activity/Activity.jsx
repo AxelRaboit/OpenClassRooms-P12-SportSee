@@ -46,7 +46,7 @@ export const Activity = ({ data }) => {
   return (
     <div className={style.container}>
       <div className={style.legendWrap}>
-        <h3>Activité quotidienne</h3>
+        <h3 className={style.title}>Activité quotidienne</h3>
         <div className={style.legendContainerElements}>
           <div className={style.legendOne}>
             <span>

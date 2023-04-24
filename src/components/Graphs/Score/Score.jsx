@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const COLORS = ['red', 'transparent'];
 
 /**
- * A chart component that displays activity bar chart based on data
+ * Displays score chart
  *
  * @param {Object} props - The props object containing data
  * @param {number} props.data -  A number to display score chart
@@ -13,7 +13,7 @@ const COLORS = ['red', 'transparent'];
  */
 
 export const Score = ({ data }) => {
-  const bgData = [{ value: 1 }];
+  const pourcentageScoreData = [{ value: 1 }];
   const scoreData = [{ value: data }, { value: 1 - data }];
 
   return (
@@ -22,13 +22,13 @@ export const Score = ({ data }) => {
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
           <Pie
-            data={bgData}
+            data={pourcentageScoreData}
             dataKey="value"
             innerRadius={90}
             outerRadius={100}
             blendStroke={true}
             isAnimationActive={false}
-            fill="#fff"
+            fill="var(--white)"
           >
             <Label
               value={`${Math.round(data * 100)}%`}

@@ -26,10 +26,14 @@ export const Performance = ({ data }) => {
           data={data}
           outerRadius="60%"
         >
-          <PolarGrid />
-          <PolarAngleAxis dataKey="subject" />
+          <PolarGrid
+            gridType="polygon"
+            polarRadius={[10, 20, 40, 60, 80]}
+            stroke="var(--white)"
+            radialLines={false}
+          />
+          <PolarAngleAxis dataKey="subject" tick={{ fill: "var(--white)" }} />
           <Radar
-            name="Mike"
             dataKey="value"
             fill="var(--red)"
             fillOpacity={0.7}
