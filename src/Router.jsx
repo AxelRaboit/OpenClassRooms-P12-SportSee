@@ -1,9 +1,8 @@
 import './App.scss'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Dashboard, Error, Login } from './pages';
 
 export const Router = () => {
-
   return (
     <>
       <BrowserRouter>
