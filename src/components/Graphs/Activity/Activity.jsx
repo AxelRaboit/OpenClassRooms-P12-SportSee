@@ -58,7 +58,7 @@ export const Activity = ({ data }) => {
             <span>
               <img src={RedDot} alt="point rouge" />
             </span>
-            caloriess Brulées (kCal)
+            Calories Brulées (kCal)
           </div>
         </div>
       </div>
