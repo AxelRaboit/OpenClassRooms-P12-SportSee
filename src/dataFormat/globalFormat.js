@@ -1,11 +1,11 @@
 import { activityFormat, averageSessionFormat, performanceFormat, scoreFormat } from './index';
 
 /**
- * @param {Array<Object>}
- * @param {Array<Object>}
- * @param {Array<Object>}
- * @param {Array<Object>}
- * @returns {Array<Object>}
+ * @param {Array<Object>} activitySessions
+ * @param {Array<Object>} performances
+ * @param {Array<Object>} user
+ * @param {Array<Object>} averageSessions
+ * @returns {Array<Object>} Return array with all data formatted
  */
 export const globalFormat = ({
   activitySessions,

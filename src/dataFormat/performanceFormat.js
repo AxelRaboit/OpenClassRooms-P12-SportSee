@@ -1,6 +1,6 @@
 /**
- * @param {Array<Object>}
- * @returns {Array<Object>}
+ * @param {Array<Object>} chartData
+ * @returns {Array<Object>} Return array of objects with subject and value
  */
 export const performanceFormat = (chartData) => {
   const categories = chartData.kind;

@@ -1,0 +1,31 @@
+{
+    "tags": {
+      "allowUnknownTags": true,
+      "dictionaries": ["jsdoc", "closure"]
+    },
+    "source": {
+      "include": ["src"],
+      "includePattern": ".js(doc|x)?$",
+      "excludePattern": "(node_modules/|docs)"
+    },
+    "plugins": ["plugins/markdown"],
+    "opts": {
+      "encoding": "utf8",
+      "destination": "docs",
+      "readme": "README.md",
+      "recurse": true,
+      "verbose": true,
+      "template": "node_modules/clean-jsdoc-theme",
+      "theme_opts": {
+        "homepageTitle": "SportSee documentation",
+        "footer": "Project 12 of OpenClassrooms path JavaScript React Developer",
+        "static_dir": ["public/favicon.png"],
+        "favicon": "public/favicon.png"
+      },
+      "displayModuleHeader": true
+    },
+    "markdown": {
+      "hardwrap": false,
+      "idInHeadings": true
+    }
+  }

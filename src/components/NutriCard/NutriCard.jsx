@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
  * @property {Object} children - SVG elements to display icon
  * @property {string} value - The nutrition value to be displayed in the card
  * @property {string} nutrition - The type of nutrition to be displayed in the card
- * @returns {React.ReactElement} Nutirition card
+ * @returns {React.ReactElement} - React component that displays a nutrition card
  */
 
 export const NutriCard = (props) => {

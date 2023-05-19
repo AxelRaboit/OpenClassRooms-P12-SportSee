@@ -9,7 +9,7 @@ const COLORS = ['red', 'transparent'];
  *
  * @param {Object} props - The props object containing data
  * @param {number} props.data -  A number to display score chart
- * @returns {React.ReactElement} Score chart
+ * @returns {React.ReactElement} - React component that displays score chart
  */
 
 export const Score = ({ data }) => {

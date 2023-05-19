@@ -1,6 +1,6 @@
 /**
- * @param {Array<Object>}
- * @returns {number}
+ * @param {Array<Object>} data
+ * @returns {number} Return score or todayScore
  */
 export const scoreFormat = (data) => {
   const score = data.score;
