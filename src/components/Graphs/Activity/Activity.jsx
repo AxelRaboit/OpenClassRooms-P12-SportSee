@@ -39,7 +39,7 @@ const CustomTooltip = ({ active, payload }) => {
  *
  * @param {Object} props - The props object containing data
  * @param {Array<Object>} props.data -  An array of data that display activity chart with
- * @returns {React.ReactElement} Activity chart
+ * @returns {React.ReactElement} - React component that displays activity chart
  */
 
 export const Activity = ({ data }) => {

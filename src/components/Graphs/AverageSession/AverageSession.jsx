@@ -35,7 +35,7 @@ const CustomTooltip = ({ active, payload }) => {
  *
  * @param {Object} props - The props object containing data
  * @param {Array<Object>} props.data -  An array of data that display average session chart with
- * @returns {React.ReactElement} Average session chart
+ * @returns {React.ReactElement} - React component that displays average session chart
  */
 
 export const AverageSession = ({ data }) => {
